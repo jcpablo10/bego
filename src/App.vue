@@ -1,32 +1,50 @@
 <template>
   <div id="app">
     <nav>
-      <router-link to="/">Home</router-link> |
-      <router-link to="/about">About</router-link>
+      <ul class="nav__list">
+        <li class="nav__item">
+          <router-link to="/">
+            <img src="./assets/angle-small-down.svg" alt="">
+          </router-link>
+        </li>
+        <li class="nav__item font-serif">
+          Upcoming
+        </li>
+        <li class="nav__item">
+          <img src="./assets/bell.svg" alt="">
+        </li>
+      </ul>
     </nav>
     <router-view/>
   </div>
 </template>
 
 <style lang="scss">
+@import url(./styles/index.scss);
 #app {
   font-family: Avenir, Helvetica, Arial, sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
   text-align: center;
-  color: #2c3e50;
 }
 
 nav {
-  padding: 30px;
-
-  a {
-    font-weight: bold;
-    color: #2c3e50;
-
-    &.router-link-exact-active {
-      color: #42b983;
-    }
-  }
+  width: 100%;
+  display: grid;
+  grid-template-columns: repeat(12, 1fr);
+  
+}
+.nav__list {
+  grid-column-start: 2;
+  grid-column-end: 12;
+  display: flex;
+  padding-left: 0;
+  gap: 5px;
+  justify-content: space-between;
+  align-items: center;
+  width: 100%;
+}
+.nav__item {
+  list-style-type: none;
 }
 </style>
