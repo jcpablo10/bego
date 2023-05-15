@@ -26,15 +26,8 @@ export default {
     background:
       linear-gradient(black, black) padding-box,
       linear-gradient(45deg, white, transparent) border-box;
-
-      
     border-radius: 25px;
     border: 1px solid transparent;
     min-height: 280px;
   }
-  .card__header {
-
-  }
-  .card__content {}
-  .card__footer {}
 </style>
